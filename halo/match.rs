@@ -66,4 +66,52 @@ fn main() {
     };
     let Student { name, .. } = s2;
     println!("name = {}", name);
+
+    // 在一些场合使用 match 匹配枚举类型并不优雅
+    // rust 提供了 if let 语法来简化这种场合的代码
+    enum Color {
+        Red,
+        Green,
+        Blue,
+    }
+    let color = Color::Red;
+    if let Color::Red = color {
+        println!("color is red");
+    }
+
+    let ss = Some("halo xxx");
+    let ss1: Option<i32> = None;
+    let ss2: Option<i32> = None;
+    // 如果 let 将 ss 解构成 Some(i) 则执行 ({})
+    if let Some(i) = ss {
+        println!("ss i = {}", i);
+    }
+    if let Some(i) = ss1 {
+        println!("ss1 i = {}", i);
+    } else {
+        // 如果没有匹配到 Some(i) 则执行 else
+        println!("ss1 is None");
+    }
+
+    let flag = true;
+    if let Some(i) = ss2 {
+        println!("ss2 i = {}", i);
+    } else if flag {
+        println!("ss2 is None");
+    } else {
+        println!("ss2 is None");
+    }
+
+    // while let 语法
+    // 将 optional 设为 Option<i32> 类型
+    let mut num33 = Some(0);
+    while let Some(i) = num33 {
+        if i > 9 {
+            println!("num33 is {}", i);
+            num33 = None;
+        } else {
+            println!("num33 is {}", i);
+            num33 = Some(i + 1);
+        }
+    }
 }
