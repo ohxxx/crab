@@ -1,0 +1,24 @@
+
+[package]
+name = "hello_world" # 项目名称
+version = "0.1.0" # 当前项目版本
+edition = "2021" # 我们使用的 rust 大版本
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+# Cargo.toml 是 cargo 特有的项目数据描述文件，存储了项目所有的元配置信息
+# 【相当于 package.json】
+
+# Cargo.lock 是 cargo 生成的依赖锁定文件，用于记录当前项目的依赖版本信息
+# 【相当于 package-lock.json/yarn.lock 等】
+
+[dependencies]
+# 使用依赖的三种方式
+# 1、使用 crates.io 上的依赖
+#   比如：rand = "0.8.4"
+# 2、使用 git 仓库上的依赖
+#   比如：rand = { git = "https://github.com/rust-random/rand" }
+# 3、使用本地依赖
+#   比如：rand = { path = "../rand" }
+
+
