@@ -1,4 +1,4 @@
-fn greet_halo() {
+pub fn halo() {
     let southern_germany = "Grüß Gott!";
     let chinese = "世界，你好";
     let english = "halo world";
@@ -6,8 +6,4 @@ fn greet_halo() {
     for region in regions.iter() {
         println!("{}", &region);
     }
-}
-
-fn main() {
-    greet_halo();
 }

@@ -1,6 +1,5 @@
-
 [package]
-name = "hello_world" # 项目名称
+name = "again" # 项目名称
 version = "0.1.0" # 当前项目版本
 edition = "2021" # 我们使用的 rust 大版本
 
