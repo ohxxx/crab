@@ -19,5 +19,6 @@ edition = "2021" # 我们使用的 rust 大版本
 #   比如：rand = { git = "https://github.com/rust-random/rand" }
 # 3、使用本地依赖
 #   比如：rand = { path = "../rand" }
+num = "0.4.0"
 
 
